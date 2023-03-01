@@ -1,0 +1,23 @@
+/* General style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background:  url(./img/illiya-vjestica-W5FdAcHp7l8-unsplash.jpg) no-repeat center center/ cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 450px;
+}
