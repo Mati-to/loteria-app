@@ -21,3 +21,10 @@ body {
     width: 600px;
     height: 450px;
 }
+
+.button {
+    background-color: #252525;
+    color: #f4f4f3;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
