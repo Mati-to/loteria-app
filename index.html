@@ -20,18 +20,23 @@
 <body>
     <div class="container">
         <div class="card" style="width: 18rem;">
-            <img src="./img/antiguo-juego.avif" class="card-img-top" alt="...">
+            <div class="card-image">
+                <img src="./img/antiguo-juego.avif" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
                 <h5 class="card-title">Lota/Bingo app</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
+                <p class="card-text">Select "New Game" to start a new session. Then just select "Take number" to pick a
+                    random number.</p>
                 <div class="button-area">
-                    <button class="button button-new-game" id="">New Game</button>
+                    <button class="button btn-reset" id="">New Game</button>
                 </div>
-                <div class="button-area">
-                    <button class="button button-take-num" id="">Take number</button>
-                </div>
+                <div class="card-footer">
+                    <h5>Random number</h5>
+                    <div class="button-area">
+                        <button class="button btn-take-num" id="">Take number</button>
+                    </div>
+                    <span id="num-display">0</span>
+                </div>  
             </div>
         </div>
     </div>
