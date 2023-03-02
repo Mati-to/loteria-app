@@ -17,9 +17,7 @@ body {
 
 .container {
     display: flex;
-    justify-content: center;
-    width: 600px;
-    height: 500px;
+    justify-content: space-evenly;
 }
 
 .button {
@@ -29,3 +27,24 @@ body {
     padding: 5px 10px;
     font-size: 0.8rem;
 }
+
+/* Grid table */
+.container2 {
+    width: 600px;
+}
+
+.row {
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    border: 1px solid black;
+    height: 2.5rem;
+    background-color: #dde5b6;
+    color: #000000;
+    border-radius: 10px;
+}
+
+
+

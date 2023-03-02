@@ -26,11 +26,14 @@ shuffle(numbers);
 // and with 'n' we display the actual number that we are picking
 let bingoNumbers = [];
 let n = 0;
-let takeNum = document.querySelector('.btn-take-num');
+const takeNum = document.querySelector('.btn-take-num');
 takeNum.addEventListener('click', () => {
-    n = numbers.pop(0);
-    bingoNumbers.push(n);
-    document.querySelector('#num-display').textContent = n;
+    if(n !== undefined) {
+        n = numbers.pop(0);
+        bingoNumbers.push(n);
+        document.querySelector('#num-display').textContent = n;
+        displayBingoNumbers();
+    }
 })
 
 // Reset of the array with the shuffled numbers
@@ -40,4 +43,18 @@ btn.addEventListener('click', () => {
     shuffle(numbers);
     bingoNumbers = [];
     document.querySelector('#num-display').textContent = 0;
+    let e = document.querySelectorAll('.col-1');
+    for (i of e) {
+        i.remove();
+    }
 })
+
+//* Display the bingo numbers in a grid container */
+// Display numbers in n in a grid container
+function displayBingoNumbers() {
+    let col = document.createElement('div');
+    col.classList.add('col-1');
+    document.querySelector('.row').prepend(col);
+    document.querySelector('.col-1').textContent = n;
+}
+
