@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'Open Sans', sans-serif;
+    ;
 }
 
 body {
@@ -12,15 +13,25 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    background:  url(./img/illiya-vjestica-W5FdAcHp7l8-unsplash.jpg) no-repeat center center/ cover;
+    background: url(./img/illiya-vjestica-W5FdAcHp7l8-unsplash.jpg) no-repeat center center/ cover;
+    transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
 }
 
-.container {
+.cont {
     display: flex;
     justify-content: space-evenly;
 }
 
-.button {
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    width: 22rem;
+}
+
+.btn {
     background-color: #252525;
     color: #f4f4f3;
     border-radius: 5px;
@@ -28,23 +39,71 @@ body {
     font-size: 0.8rem;
 }
 
-/* Grid table */
-.container2 {
+.btn-reset {
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#num-display {
+    font-size: 2.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70px;
+}
+
+/** Grid table */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f3;
+    border-radius: 5px;
+}
+
+.cont2 {
     width: 600px;
 }
 
 .row {
-    /* border: 1px solid black; */
+    margin: 0px;
     flex-wrap: wrap;
 }
 
 .col-1 {
-    border: 1px solid black;
+    border: 2px solid red;
     height: 2.5rem;
-    background-color: #dde5b6;
-    color: #000000;
-    border-radius: 10px;
+    background-color: #e4b47e;
+    color: black;
+    font-weight: 600;
+    border-radius: 50%;
 }
 
+/** Media queries */
+@media (max-width: 900px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        background: url(./img/gautier-salles-_NAwOXcyxFk-unsplash.jpg) no-repeat center center/ cover;
+        transition: background-image 0.2s ease-in-out;
+        transition: background-image 0.2s ease-in-out;
+    }
 
+    .cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
 
+    .cont2 {
+        width: 600px;
+        height: 300px;
+    }
+}
