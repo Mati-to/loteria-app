@@ -25,14 +25,16 @@
             </div>
             <div class="card-body">
                 <h4 class="card-title">Lota/Bingo app</h4>
-                <p class="card-text">Select "New Game" to start a new session. Then just select "Take number" to pick a
-                    random number.</p>
-                <div class="button-area">
-                    <button class="btn btn-primary btn-sm btn-reset" id="">New Game</button>
-                </div>
+                <p class="card-text">Select "New Game" to start a new session. Select "Take number" to pick a
+                    random number. Select "Interval" and establish and interval to make it automatic</p>
+                <button class="btn btn-primary btn-sm btn-reset" id="">New Game</button>
                 <div class="card-footer">
                     <div class="button-area">
                         <button class="btn btn-primary btn-sm btn-take-num" id="">Take a number</button>
+                        <form class="form-floating-sm form-box" name="formid">
+                            <input type="number" id="interval-input" min="5" max="10" name="interval-input" placeholder="5">
+                        </form>
+                        <button class="btn btn-primary btn-sm btn-interval" id="">Interval</button>
                     </div>
                     <span id="num-display">0</span>
                 </div>
