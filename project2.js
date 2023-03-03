@@ -48,6 +48,7 @@ btn.addEventListener('click', () => {
         i.remove();
     }
     clearInterval(myTimer);
+    document.querySelector('.btn-interval').disabled = false;
 })
 
 // Display numbers on screen
@@ -63,9 +64,12 @@ function displayBingoNumbers() {
 const btnInterval = document.querySelector('.btn-interval');
 const intervalInput = document.querySelector("#interval-input");
 let myTimer;
+function disableBtn(){
+    document.querySelector('.btn-interval').disabled = true;
+}
 
 btnInterval.addEventListener('click', () => {
-    let intervalValue = intervalInput.value;
+    const intervalValue = intervalInput.value;
     myTimer = setInterval(() => {
         if (n !== undefined && intervalValue >= 5) {
             n = numbers.pop(0);
