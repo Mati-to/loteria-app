@@ -28,7 +28,7 @@ let bingoNumbers = [];
 let n = 0;
 const takeNum = document.querySelector('.btn-take-num');
 takeNum.addEventListener('click', () => {
-    if(n !== undefined) {
+    if (n !== undefined) {
         n = numbers.pop(0);
         bingoNumbers.push(n);
         document.querySelector('#num-display').textContent = n;
@@ -47,10 +47,11 @@ btn.addEventListener('click', () => {
     for (i of e) {
         i.remove();
     }
+    clearInterval(myTimer);
+    document.querySelector('.btn-interval').disabled = false;
 })
 
-//* Display the bingo numbers in a grid container */
-// Display numbers in n in a grid container
+// Display numbers on screen
 function displayBingoNumbers() {
     let col = document.createElement('div');
     col.classList.add('col-1');
@@ -58,3 +59,24 @@ function displayBingoNumbers() {
     document.querySelector('.col-1').textContent = n;
 }
 
+// Display the numbers automatically within a certain period
+// of time, which is specified by the user between certain options.
+const btnInterval = document.querySelector('.btn-interval');
+const intervalInput = document.querySelector("#interval-input");
+let myTimer;
+function disableBtn(){
+    document.querySelector('.btn-interval').disabled = true;
+}
+
+btnInterval.addEventListener('click', () => {
+    const intervalValue = intervalInput.value;
+    myTimer = setInterval(() => {
+        if (n !== undefined && intervalValue >= 5) {
+            n = numbers.pop(0);
+            bingoNumbers.push(n);
+            document.querySelector('#num-display').textContent = n;
+            displayBingoNumbers();
+        }
+    }, intervalValue * 1000);
+
+})

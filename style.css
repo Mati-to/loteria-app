@@ -31,12 +31,26 @@ body {
     width: 22rem;
 }
 
+/** Card footer **/
+.form-box {
+    margin-top: 5px;
+    padding: 5px;
+    border-top: 2px solid #c92020;
+}
+
 .btn {
     background-color: #252525;
     color: #f4f4f3;
+    border: 0;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 0.8rem;
+}
+
+.button-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .btn-reset {
@@ -56,7 +70,7 @@ body {
     width: 70px;
 }
 
-/** Grid table */
+/** Display bingo numbers */
 h2 {
     font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f3;
@@ -70,15 +84,23 @@ h2 {
 .row {
     margin: 0px;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
 }
 
 .col-1 {
     border: 2px solid red;
-    height: 2.5rem;
+    width: 50px;
+    height: 50px;
     background-color: #e4b47e;
     color: black;
     font-weight: 600;
+    font-size: large;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 /** Media queries */
