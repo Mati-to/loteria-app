@@ -14,38 +14,39 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- My stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <title>Project 2 - Loteria app</title>
+    <title>Project 2 - Loteria/Bingo app</title>
 </head>
 
 <body>
-    <div class="container-lg cont">
-        <div class="card">
-            <div class="card-image-lg">
-                <img src="./img/antiguo-juego.avif" class="card-img-top" alt="...">
+    <main class="container-lg cont">
+        <section class="card">
+            <div class="card-image">
+                <img src="./img/antiguo-juego.avif" class="card-img-top" alt="Bingo card and numbers">
             </div>
             <div class="card-body">
                 <h4 class="card-title">Lota/Bingo app</h4>
                 <p class="card-text">Select "New Game" to start a new session. Select "Take number" to pick a
-                    random number. Establish a timer and select "Interval" to make it automatic</p>
+                    random number. Set a timer and select "Interval" to make it automatic.</p>
                 <button class="btn btn-primary btn-sm btn-reset" id="">New Game</button>
                 <div class="card-footer">
-                    <div class="button-area">
-                        <button class="btn btn-primary btn-sm btn-take-num" id="">Take a number</button>
+                    <div class="card-button-area">
+                        <button class="btn btn-primary btn-sm btn-take-num">Take a number</button>
                         <form class="form-floating-sm form-box" name="formid">
-                            <input type="number" id="interval-input" min="5" max="10" name="interval-input" placeholder="5">
+                            <input type="number" id="interval-input" min="5" max="10" name="interval-input" 
+                            placeholder="Select">
                         </form>
-                        <button class="btn btn-primary btn-sm btn-interval" onclick='disableBtn()'>Interval</button>
+                        <button class="btn btn-primary btn-sm btn-interval" onclick="disableBtn()">Interval</button>
                     </div>
                     <span id="num-display">0</span>
                 </div>
             </div>
-        </div>
-        <div class="container-lg cont2">
+        </section>
+        <section class="container cont2">
             <h2>Called numbers</h2>
             <div class="row">
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <!-- Script project2 -->
     <script src="project2.js"></script>
     <!-- Boostrap script link -->

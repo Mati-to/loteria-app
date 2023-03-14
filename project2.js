@@ -37,6 +37,7 @@ takeNum.addEventListener('click', () => {
 })
 
 // Reset of the array with the shuffled numbers
+// Reset the interval timer 
 const btn = document.querySelector('.btn-reset');
 btn.addEventListener('click', () => {
     numbers = [];
@@ -51,7 +52,8 @@ btn.addEventListener('click', () => {
     document.querySelector('.btn-interval').disabled = false;
 })
 
-// Display numbers on screen
+// Display numbers on screen adding a new element everytime
+// a number is picked
 function displayBingoNumbers() {
     let col = document.createElement('div');
     col.classList.add('col-1');
@@ -78,5 +80,4 @@ btnInterval.addEventListener('click', () => {
             displayBingoNumbers();
         }
     }, intervalValue * 1000);
-
 })
