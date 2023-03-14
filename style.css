@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    ;
 }
 
 body {
@@ -17,6 +16,7 @@ body {
     transition: background-image 0.2s ease-in-out;
     transition: background-image 0.2s ease-in-out;
 }
+
 
 .cont {
     display: flex;
@@ -47,7 +47,7 @@ body {
     font-size: 0.8rem;
 }
 
-.button-area {
+.card-button-area {
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -70,7 +70,7 @@ body {
     width: 70px;
 }
 
-/** Display bingo numbers */
+/** Bingo numbers display */
 h2 {
     font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f3;
