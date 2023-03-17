@@ -1,137 +1,145 @@
 /* General style */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background: url(./img/illiya-vjestica-W5FdAcHp7l8-unsplash.jpg) no-repeat center center/ cover;
-    transition: background-image 0.2s ease-in-out;
-    transition: background-image 0.2s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	text-align: center;
+	background: url(./img/illiya-vjestica-W5FdAcHp7l8-unsplash.jpg) no-repeat
+		center center/ cover;
+	transition: background-image 0.2s ease-in-out;
+	transition: background-image 0.2s ease-in-out;
 }
 
-
 .cont {
-    display: flex;
-    justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .card-title {
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .card {
-    width: 22rem;
+	width: 22rem;
 }
 
 /** Card footer **/
 .form-box {
-    margin-top: 5px;
-    padding: 5px;
-    border-top: 2px solid #c92020;
+	margin-top: 5px;
+	padding: 5px;
+	border-top: 2px solid #c92020;
 }
 
 .btn {
-    background-color: #252525;
-    color: #f4f4f3;
-    border: 0;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 0.8rem;
+	background-color: #252525;
+	color: #f4f4f3;
+	border: 0;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 0.8rem;
 }
 
 .card-button-area {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
 }
 
 .btn-reset {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 .card-footer {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+	display: flex;
+	align-items: center;
+	gap: 50px;
 }
 
 #num-display {
-    font-size: 2.5rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 70px;
+	font-size: 2.5rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 70px;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
 }
 
 /** Bingo numbers display */
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f3;
-    border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #f4f4f3;
+	border-radius: 5px;
 }
 
 .cont2 {
-    width: 600px;
+	width: 600px;
 }
 
 .row {
-    margin: 0px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
+	margin: 0px;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
 }
 
 .col-1 {
-    border: 2px solid red;
-    width: 50px;
-    height: 50px;
-    background-color: #e4b47e;
-    color: black;
-    font-weight: 600;
-    font-size: large;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+	border: 2px solid red;
+	width: 50px;
+	height: 50px;
+	background-color: #e4b47e;
+	color: black;
+	font-weight: 600;
+	font-size: large;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
 }
 
 /** Media queries */
 @media (max-width: 900px) {
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        text-align: center;
-        background: url(./img/gautier-salles-_NAwOXcyxFk-unsplash.jpg) no-repeat center center/ cover;
-        transition: background-image 0.2s ease-in-out;
-        transition: background-image 0.2s ease-in-out;
-    }
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100%;
+		text-align: center;
+		background: url(./img/gautier-salles-_NAwOXcyxFk-unsplash.jpg) no-repeat
+			center center/ cover;
+		transition: background-image 0.2s ease-in-out;
+		transition: background-image 0.2s ease-in-out;
+        background-attachment: fixed;
+	}
 
-    .cont {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-    }
+	.cont {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.25rem;
+        margin-top: .625rem;
+	}
 
-    .cont2 {
-        width: 600px;
-        height: 300px;
-    }
+	.cont2 {
+		width: 37.5rem;
+		height: 18.75rem;
+	}
 }
 
 @media (max-width: 650px) {
-    .cont2 {
-        width: 100%;
-    }
+	.cont2 {
+		width: 100%;
+	}
 }
